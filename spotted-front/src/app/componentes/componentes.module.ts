@@ -3,6 +3,7 @@ import { LoginModule } from './login/login.module';
 import { RouterModule } from '@angular/router';
 import { CriarLoginModule } from './criar-login/criar-login.module';
 import { NgModule } from "@angular/core";
+import { DiscussModule } from './discuss/discuss.module';
 
 @NgModule({
 
@@ -10,7 +11,8 @@ import { NgModule } from "@angular/core";
         CriarLoginModule,
         RouterModule,
         LoginModule,
-        NaoEncontradoModule
+        DiscussModule,
+        NaoEncontradoModule,
     ]
 })
 export class ComponentesModule{}
