@@ -1,3 +1,4 @@
+import { NaoEncontradoModule } from './nao-encontrado/nao-encontrado.module';
 import { LoginModule } from './login/login.module';
 import { RouterModule } from '@angular/router';
 import { CriarLoginModule } from './criar-login/criar-login.module';
@@ -8,7 +9,8 @@ import { NgModule } from "@angular/core";
     exports:[
         CriarLoginModule,
         RouterModule,
-        LoginModule
+        LoginModule,
+        NaoEncontradoModule
     ]
 })
 export class ComponentesModule{}
