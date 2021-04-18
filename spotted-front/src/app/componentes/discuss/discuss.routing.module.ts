@@ -6,10 +6,6 @@ const rota:Routes = [
     {
         path: 'conversa/:id',
         component: DiscussComponent
-    },
-    {
-        path: 'conversas',
-        component: DiscussComponent
     }
 ];
 
