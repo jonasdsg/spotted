@@ -1,3 +1,4 @@
+import { NewSpottModule } from './new-spott/new-spot.module';
 import { NaoEncontradoModule } from './nao-encontrado/nao-encontrado.module';
 import { LoginModule } from './login/login.module';
 import { RouterModule } from '@angular/router';
@@ -12,6 +13,11 @@ import { DiscussModule } from './discuss/discuss.module';
         RouterModule,
         LoginModule,
         DiscussModule,
+        NewSpottModule,
+        
+        //
+        //Sempre manter esse componente por ultimo, caso contrário oque estiver 
+        // abaixo dele nunca será encontrado por rotas.
         NaoEncontradoModule,
     ]
 })
