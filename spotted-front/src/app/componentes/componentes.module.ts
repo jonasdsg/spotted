@@ -1,3 +1,4 @@
+import { ProcurarSpottModule } from './procurar-spott/procurar-spott.module';
 import { NewSpottModule } from './new-spott/new-spot.module';
 import { NaoEncontradoModule } from './nao-encontrado/nao-encontrado.module';
 import { LoginModule } from './login/login.module';
@@ -14,11 +15,12 @@ import { DiscussModule } from './discuss/discuss.module';
         LoginModule,
         DiscussModule,
         NewSpottModule,
+        ProcurarSpottModule
         
         //
         //Sempre manter esse componente por ultimo, caso contrário oque estiver 
         // abaixo dele nunca será encontrado por rotas.
-        NaoEncontradoModule,
+        ,NaoEncontradoModule,
     ]
 })
 export class ComponentesModule{}
