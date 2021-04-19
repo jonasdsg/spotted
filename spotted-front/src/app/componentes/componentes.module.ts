@@ -1,3 +1,4 @@
+import { SpottModule } from './spott/spott.module';
 import { ProcurarSpottModule } from './procurar-spott/procurar-spott.module';
 import { NewSpottModule } from './new-spott/new-spot.module';
 import { NaoEncontradoModule } from './nao-encontrado/nao-encontrado.module';
@@ -15,7 +16,8 @@ import { DiscussModule } from './discuss/discuss.module';
         LoginModule,
         DiscussModule,
         NewSpottModule,
-        ProcurarSpottModule
+        ProcurarSpottModule,
+        SpottModule
         
         //
         //Sempre manter esse componente por ultimo, caso contrário oque estiver 
