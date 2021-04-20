@@ -1,3 +1,4 @@
+import { AuthGuardService } from './../auth-guard.service';
 import { ProcuraSpottComponent } from './procura-spott.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -5,7 +6,8 @@ import { NgModule } from '@angular/core';
 const rota:Routes = [
     {
         path: 'procurar',
-        component: ProcuraSpottComponent
+        component: ProcuraSpottComponent,
+        canActivate: [AuthGuardService]
     }
 ];
 @NgModule({
