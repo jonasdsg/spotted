@@ -13,7 +13,7 @@ export class AppManagerService {
     }
 
     get isLogged():Observable<boolean>{
-        return of(false);
+        return of(true);
     }
 
     get verify():Observable<boolean>{
@@ -22,14 +22,16 @@ export class AppManagerService {
         this.isLogged.subscribe(isLogged =>{
             //Comentário só pra avisar que até eu fiquei confuso com essa lógica, e olha que foi eu que fiz haahaha.
             this.getRota.subscribe(rota =>{
-                const loginPath = ['','/','/login','login'].includes(rota);
+                const rotaAtual = rota.replace('/','');
+                const loginPath = ['login'].includes(rotaAtual);
                 if(loginPath && isLogged){
                     this.router.navigate(['/procurar']);
                 }
                 if(!loginPath && !isLogged){
-                    this.router.navigate(['/login']);
+                    !'cadastro'.includes(rotaAtual) && this.router.navigate(['/login']);
                 }
-                value = new BehaviorSubject<boolean>((loginPath && !isLogged)||(!loginPath && isLogged));
+                
+                value = new BehaviorSubject<boolean>((loginPath && !isLogged)||(!loginPath && isLogged)||'cadastro'.includes(rotaAtual));
                 
             })
         })
